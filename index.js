@@ -32,12 +32,17 @@ mongoose.connect(process.env.MONGO_URL)
 
 const PORT = process.env.PORT || 4000;
 
+// https://airbnb-client-w23q.vercel.app
 // Middleware
-app.use(cors({
-    origin: 'https://airbnb-client-w23q.vercel.app', // Adjust this to your frontend's origin
-    credentials: true,
-}));
 
+
+app.use(cors({
+    origin: [
+        'https://airbnb-client-w23q.vercel.app',  // Deployed frontend
+        'http://127.0.0.1:5173',  // Local environment
+    ],
+    credentials: true,  // Enable sending credentials (cookies, etc.)
+}));
 app.use(express.json());
 ;
 // c532152ad6f330270b632b3a5448663b
