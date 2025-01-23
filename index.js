@@ -34,13 +34,13 @@ const PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(cors({
-    origin: 'http://127.0.0.1:5173', // Adjust this to your frontend's origin
+    origin: 'https://airbnb-client-chi.vercel.app', // Adjust this to your frontend's origin
     credentials: true,
 }));
 
 app.use(express.json());
 ;
-
+// c532152ad6f330270b632b3a5448663b
 // Middleware and routes can be defined here
 
 app.listen(PORT, () => {
