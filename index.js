@@ -30,7 +30,7 @@ mongoose.connect(process.env.MONGO_URL)
         // console.log('MongoDB Connection Error: ' + error);
     });
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(cors({
