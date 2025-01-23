@@ -34,7 +34,7 @@ const PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(cors({
-    origin: 'https://airbnb-client-w23q.vercel.app/', // Adjust this to your frontend's origin
+    origin: 'https://airbnb-client-w23q.vercel.app', // Adjust this to your frontend's origin
     credentials: true,
 }));
 
