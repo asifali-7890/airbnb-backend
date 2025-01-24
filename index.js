@@ -38,7 +38,7 @@ const PORT = process.env.PORT || 4000;
 
 app.use(cors({
     origin: [
-        'https://airbnb-client-ntyq.vercel.app/',
+        'https://airbnb-client-ntyq.vercel.app',
         'https://airbnb-client-w23q.vercel.app',  // Deployed frontend
         'http://127.0.0.1:5173',  // Local environment
     ],
