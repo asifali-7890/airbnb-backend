@@ -24,10 +24,10 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URL)
     .then(() => {
-        // console.log('MongoDB Connection Established');
+        console.log('MongoDB Connection Established');
     })
     .catch((error) => {
-        // console.log('MongoDB Connection Error: ' + error);
+        console.log('MongoDB Connection Error: ' + error);
     });
 
 const PORT = process.env.PORT || 4000;
@@ -38,6 +38,7 @@ const PORT = process.env.PORT || 4000;
 
 app.use(cors({
     origin: [
+        'https://airbnb-client-ntyq.vercel.app/',
         'https://airbnb-client-w23q.vercel.app',  // Deployed frontend
         'http://127.0.0.1:5173',  // Local environment
     ],
@@ -49,7 +50,7 @@ app.use(express.json());
 // Middleware and routes can be defined here
 
 app.listen(PORT, () => {
-    // console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
 
 app.get('/test', (req, res) => {
